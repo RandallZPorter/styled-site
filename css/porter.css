@@ -3,6 +3,27 @@ body {
   background-size: cover;
 }
 
+.navbar-outer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+.img-circle {
+  padding: 0.9em;
+  position: relative;
+  z-index: 999;
+}
+.navbar-block {
+  background-color: darkslategrey;
+  border-radius: 10em;
+}
+space-buffer {
+  padding-right: 10em;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -21,12 +42,17 @@ nav ul li {
 nav ul li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 0.3em;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
   text-decoration: none;
   font-size: 2em;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -35,6 +61,8 @@ nav ul li a:hover {
 
 h1 {
   margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -68,23 +96,29 @@ h1 {
   margin: 0.2em;
   padding: 0.2em;
 }
-
-/*******************************************************/
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 0.9em; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 0.3em; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 0.5em; /* Add a top margin */
-  margin-bottom: 1.5em; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+.code table tr th {
+  padding-right: 0.4em;
+  padding-right: 0.4em;
+  border: 0.1em solid black;
+}
+.code table tr td {
+  padding-right: 0.4em;
+  padding-right: 0.4em;
+  border: 0.1em solid black;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 0.9em; 
+  border: 0.1em solid #ccc;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  resize: vertical;
+}
+
+input[type=button] {
   background-color: darkslategrey;
   color: white;
   padding: 0.9em 1.7em;
@@ -93,18 +127,27 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+input[type=button]:hover {
   background-color: lightslategrey;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   border-radius: 0.4em;
   background-color: #f2f2f2;
   padding: 1.7em;
 }
 
+#links {
+  list-style-type: none;
+  display: flex;
+  margin: 1em;
+}
 
+#links li {
+  padding: 1em;
+}
 
-
+footer {
+  color: white;
+  margin-left: 1em;
+}

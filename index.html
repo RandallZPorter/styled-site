@@ -1,80 +1,207 @@
 ﻿<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Randall Porter">
-    
-    <!-- CSS -->
-    <link href="css/porter.css" rel="stylesheet">
-    
-    <title>About Me</title>
-    <header><h1>About Me</h1><header>
-  </head>
-  
-  <body>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="primes.html">Primes</a></li>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Randall Porter">
+      
+      <!-- CSS -->
+      <link href="css/porter.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <title>About Me</title>
+      <ul class="navbar-outer">
+        <li>
+          <nav>
+            <ul>
+              <li><space-buffer></space-buffer></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="primes.html">Primes</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li class="navbar-block">
+          <img src="porter.jpg" class="img-circle" alt="Randall Porter" width="150" height="150">
+        </li>
       </ul>
-    </nav>
+      <header>
+        <h1>About Me</h1>
+      </header>
+    </head>
+    
+    <body>
+      <main>
+        <article class="primary-box">
+          <div class="article-secondary-box">
+            <h2>Introduction</h2>
+              <p class="text">
+                I am a studying for a Bachelors of Science degree and majoring in computer science. This is my final semester. I completed my first two years in the Missouri Academy of Science, Mathematics, and Computing (before it closed down) here at Northwest.
+              </p>
+          </div>
+          <div class="article-secondary-box">
+            <h2>Background</h2>
+            <p class="text">
+              I am from a small town in Missouri, where there is also a software company which I have been working for since 2016. I am employed as a Software Developer-Analyst, and I use mainly Java, SQL (of the DB2/os400 flavor), XML, and RPG to make web-based software for utility companies and municipalities. My hobbies are video games, foreign language, flintknapping, shooting guns, and coin collecting.
+            </p>
+          </div>
+          <div class="article-secondary-box">
+            <h2>Plans</h2>
+            <p class="text">
+              After graduating, I plan to continue working in my current position for the foreseeable future.
+            </p>
+          </div>
+        </article>
 
-    <main>
-      <article class="primary-box">
-<div class="article-secondary-box">
-	<h2>Introduction</h2>
-        <p class="text">I am a studying for a Bachelors of Science degree and majoring in computer science. This is my final semester. I completed my first two years in the Missouri Academy of Science, Mathematics, and Computing (before it closed down) here at Northwest.</p>
-</div>
+        <aside class="primary-box">
+          <h2>Aside</h2>
+          <p class="text">
+            I made my own programming language a few weeks ago. I named it "Bur." Here are some features of this language:
+          </p>
+          <ol>
+            <li>It is interpreted by an interpreter I wrote in Java</li>
+            <li>The only explicitly defined math is devision</li>
+            <li>Dividing by zero will randomly increment or decrement the top of the stack</li>
+            <li>Loops can be simulated with recursive functions</li>
+            <li>It is slow, even compared to PowerShell and Python</li>
+            <li>Whitespace is ignored</li>
+          </ol>
+          <p class="text">
+            The sample below is a prime number generator:
+          </p>
+          <div class="code">
+            <p>
+              <br>~@1~$a!#0!`114?~$b?~$b!~$a!~$b!‽&lt;1*;
+              <br>~@2~$s!#0!`114?~$b?~$b!~$s!~$b!‽>2*;
+              <br>~@3~$a?~$s?@1@~$a?@2@~$s?~$s!~$a!~$s!#0!‽&lt;3*;
+              <br>~@4~$s?~$a?@2@~$h?~$a!~$s?@2@~$a?~$h!~$s?~$a!~$s!~$s!#0!‽&lt;4*;
+              <br>~@5@4@~$x?;
+              <br>~@6~$m?~$n?~$n!~$m!@5@~$n?~$n!~$m!~$n!~$m!‽&lt;6*;
+              <br>~@7~$m?~$n?~$n!~$m!~$n!~$m!~$m0?~$n0?~$n!~$m!‽&lt;6*~$x?~$x?~$x!~$x!~$m0!‽=8*~$m0!~$n0!‽=8*~$m0!#1!‽=8*;
+              <br>~@8#0!;
+              <br>~@9~$p0?#1!@10@~$p?#1!#0!~$p!~$p0!‽=11*;
+              <br>~@10#1!@3@~$i?~$p0!~$i!@7@~$p?~$p0!~$i!~$p!#0!‽&lt;10*;
+              <br>~@11~$x?;
+              <br>~@12#2!@3@~$z?~$z!@9@#1!‽=13*~$z!@12@;
+              <br>~@13~$z!!v;
+              <br>#2!!v
+              <br>#1!
+              <br>@12@
+              <br>,..
+            </p>
+          </div>
+          <ul id="links">
+            <li><iframe width="420" height="315" src="https://www.youtube.com/embed/to0JAnZ1owA"></iframe></li>
+            <li><a href="https://github.com/RandallZPorter"><img src="github.png" alt="GitHub" width="120" height="120"></a></li>
+            <li><a href="https://plus.google.com/u/0/104612000241739027323"><img src="google.png" alt="GitHub" width="120" height="120"></a></li>
+            <li class="code">
+              <table>
+                <tr>
+                  <th>Language</th>
+                  <th>Type</th> 
+                  <th>Where I Use It</th>
+                </tr>
+                <tr>
+                  <td>Java</td>
+                  <td>Programming</td> 
+                  <td>School, Work, Fun</td>
+                </tr>
+                <tr>
+                  <td>Python</td>
+                  <td>Scripting</td> 
+                  <td>School</td>
+                </tr>
+                <tr>
+                  <td>Javascript</td>
+                  <td>Scripting</td> 
+                  <td>School, Work</td>
+                </tr>
+                <tr>
+                  <td>PowerShell</td>
+                  <td>Scripting</td> 
+                  <td>School, Work, Fun</td>
+                </tr>
+                <tr>
+                  <td>Bur</td>
+                  <td>Programming</td> 
+                  <td>(I Built It!)</td>
+                </tr>
+                <tr>
+                  <td>SQL</td>
+                  <td>Data Manipulation</td> 
+                  <td>School, Work</td>
+                </tr>
+                <tr>
+                  <td>XML</td>
+                  <td>Markup</td> 
+                  <td>Work</td>
+                </tr>
+                <tr>
+                  <td>HTML</td>
+                  <td>Markup</td> 
+                  <td>School, Work</td>
+                </tr>
+                <tr>
+                  <td>noSQL</td>
+                  <td>Data Manipulation</td> 
+                  <td>School</td>
+                </tr>
+              <tr>
+                  <td>RPG</td>
+                  <td>Data/Reports</td> 
+                  <td>Work</td>
+                </tr>
+                <tr>
+                  <td>Swift</td>
+                  <td>Programming</td> 
+                  <td>School</td>
+                </tr>
+                <tr>
+                  <td>TI-Basic</td>
+                  <td>Scripting</td> 
+                  <td>Fun</td>
+                </tr>
+                <tr>
+                  <td>C</td>
+                  <td>Programming</td> 
+                  <td>School, Fun</td>
+                </tr>
+                <tr>
+                  <td>ARM Assembly</td>
+                  <td>Programming</td> 
+                  <td>School, Fun</td>
+                </tr>
+                <tr>
+                  <td>x86 Assembly</td>
+                  <td>Programming</td> 
+                  <td>Fun</td>
+                </tr>
+                <tr>
+                  <td>CSS</td>
+                  <td>Markup</td> 
+                  <td>School</td>
+                </tr>
+                <tr>
+                  <td>Snap</td>
+                  <td>Scripting</td> 
+                  <td>School</td>
+                </tr>
+                <tr>
+                  <td>Bash</td>
+                  <td>Scripting</td> 
+                  <td>School, Fun</td>
+                </tr>
+              </table>
+            </li>
+          </ul>     
+        </aside>
+      </main>
 
-<div class="article-secondary-box">
-	<h2>Background</h2>
-        <p class="text">I am from a small town in Missouri, where there is also a software company which I have been working for since 2016. I am employed as a Software Developer-Analyst, and I use mainly Java, SQL (of the DB2/os400 flavor), XML, and RPG to make web-based software for utility companies and municipalities. My hobbies are video games, foreign language, flintknapping, shooting guns, and coin collecting.
-</p>
-</div>
+      <br>
+      <hr>
+      <footer>
+        &copy; 2019 Randall Porter
+      </footer>
 
-<div class="article-secondary-box">
-	<h2>Plans</h2>
-	<p class="text">After graduating, I plan to continue working in my current position for the foreseeable future.</p>
-</div>
-      </article>
-
-      <aside class="primary-box">
-        <h2>Aside</h2>
-	<p class="text">I made my own programming language a few weeks ago. I named it "Bur." It is esoteric, stack-based, nondeterministic, and interpreted. The sample below is a prime number generator:</p>
-	<div class="code">
-
-<p>
-<br>~@1~$a!#0!`114?~$b?~$b!~$a!~$b!‽<1*;
-<br>~@2~$s!#0!`114?~$b?~$b!~$s!~$b!‽>2*;
-<br>~@3~$a?~$s?@1@~$a?@2@~$s?~$s!~$a!~$s!#0!‽<3*;
-<br>~@4~$s?~$a?@2@~$h?~$a!~$s?@2@~$a?~$h!~$s?~$a!~$s!~$s!#0!‽<4*;
-<br>~@5@4@~$x?;
-<br>~@6~$m?~$n?~$n!~$m!@5@~$n?~$n!~$m!~$n!~$m!‽<6*;
-<br>~@7~$m?~$n?~$n!~$m!~$n!~$m!~$m0?~$n0?~$n!~$m!‽<6*~$x?~$x?~$x!~$x!~$m0!‽=8*~$m0!~$n0!‽=8*~$m0!#1!‽=8*;
-<br>~@8#0!;
-<br>~@9~$p0?#1!@10@~$p?#1!#0!~$p!~$p0!‽=11*;
-<br>~@10#1!@3@~$i?~$p0!~$i!@7@~$p?~$p0!~$i!~$p!#0!‽<10*;
-<br>~@11~$x?;
-<br>~@12#2!@3@~$z?~$z!@9@#1!‽=13*~$z!@12@;
-<br>~@13~$z!!v;
-<br>#2!!v
-<br>#1!
-<br>@12@
-<br>,..
-<p>
-
-	</div>
-      </aside>
-    </main>
-
-    <br>
-    <hr>
-    <footer>
-      &copy; 2019 Randall Porter
-    </footer>
-   
-  </body>
-</html>
+    </body>
+  </html>

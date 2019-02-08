@@ -1,18 +1,89 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Randall Porter">
-    
-    <title>About Me</title>
-    <header><h1>Work With Primes</h1><header>
-  </head>
-  
-  <body>
-    <a href="https://github.com/RandallZPorter/styled-site/blob/master/primes.html">Back to edit</a>
-    <a href="contact.html">Contact</a>
-    <a href="primes.html">Home</a>
-  </body>
-</html>
+   <html lang="en">
+      <head>
+         <!-- Required meta tags -->
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <meta name="author" content="Randall Porter">
+         
+         <!-- CSS -->
+         <link href="css/porter.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   
+         <title>About Me</title>
+         <ul class="navbar-outer">
+         <li>
+            <nav>
+               <ul>
+               <li><space-buffer></space-buffer></li>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="contact.html">Contact</a></li>
+               <li><a href="primes.html">Primes</a></li>
+               </ul>
+            </nav>
+         </li>
+         <li class="navbar-block">
+            <img src="porter.jpg" class="img-circle" alt="Randall Porter" width="150" height="150">
+         </li>
+         </ul>
+         <header><h1>About Me</h1></header>
+      </head>
+
+      <body>
+         <main>
+            <article class="primary-box">
+               <div class="container">
+                  <form>	
+                     <label for="num">Use this to find the next highest or lowest prime.</label>
+                     <input type="text" id="num" name="num" placeholder="Enter an integer.">
+                     <input type="button" value="Previous Prime" onclick="testScriptPrevious()">
+                     <input type="button" value="Next Prime" onclick="testScriptNext()">
+                     <script>
+                        function testScriptNext(){
+                           var val = document.getElementById("num").value; 
+                           if (val < 2){
+                              val = 2;
+                           } else if (val == 2) {
+                              val = 3;
+                           } else {
+                              val++;
+                              while(!isPrime(val)){
+                                 val++;
+                              }
+                           }
+                           document.getElementById("num").value = val;
+                        }
+                        function testScriptPrevious(){
+                           var val = document.getElementById("num").value; 
+                           if (val <= 2){
+                              val = 2;
+                           } else if (val == 3) {
+                              val = 2;
+                           } else {
+                              val--;
+                              while(!isPrime(val)){
+                                 val--;
+                              }
+                           }
+                           document.getElementById("num").value = val;
+                        }
+                        function isPrime(num){
+                           if (num % 2 == 0){ return false; }
+                           for (factor = 3; factor <= num / 2; factor += 2){
+                              if (num % factor == 0){ return false; }
+                           }
+                           return true;
+                        }
+                     </script>
+                  </form>
+               </div>
+            </article>
+         </main>
+
+         <br>
+         <hr>
+         <footer>
+            &copy; 2019 Randall Porter
+         </footer>
+      </body>
+   </html>
