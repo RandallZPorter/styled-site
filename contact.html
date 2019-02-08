@@ -6,13 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Randall Porter">
     
-    <title>About Me</title>
-    <header><h1>Contact Me</h1><header>
+    <!-- CSS -->
+    <link href="css/porter.css" rel="stylesheet">
+    
+    <title>Contact</title>
+    <header><h1>Contact</h1><header>
   </head>
   
   <body>
-    <a href="https://github.com/RandallZPorter/styled-site/blob/master/contact.html">Back to edit</a>
-    <a href="index.html">Home</a>
-    <a href="primes.html">Work with primes</a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="primes.html">Primes</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article class="primary-box">
+	<h2> Contact Form </h2>
+
+<div class="container">
+  <form>	
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+    <label for="subject">Message</label>
+    <textarea id="subject" name="subject" placeholder="This message won't actually be submitted because GitHub pages apparently does not support php and stuff like that." style="height:10em"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+
+      </article>
+    </main>
+
+    <br>
+    <hr>
+    <footer>
+      &copy; 2019 Randall Porter
+    </footer>
+   
   </body>
 </html>
