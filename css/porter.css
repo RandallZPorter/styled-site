@@ -1,6 +1,10 @@
 nav {
   background-color: darkslategrey;
-  position: relative;
-  top: 0em;
   color: wheat;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
