@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!-- example provided by qunitjs.com cookbook -->
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.1.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.1.js"></script>
+  <script>
+    QUnit.test( "Test Finding Next Prime", function( assert ) {
+      assert.equal( 5, nextPrime(3), "5 is the prime following 3" );
+      assert.equal( 29, nextPrime(23), "29 is the prime following 23" );
+      assert.equal( 13, nextPrime(11.0), "13 is the prime following 11.0" );
+      assert.equal( 13, nextPrime(11.1), "13 is the prime following 11.1" );
+      assert.equal( 13, nextPrime(11.5), "13 is the prime following 11.5" );
+      assert.equal( 2, nextPrime(-1), "2 is the prime following -1" );
+    });
+    QUnit.test( "Test Finding Previous Prime", function( assert ) {
+      assert.equal( 13, previousPrime(13.1), "13 is the prime preceding 13.1" );
+      assert.equal( 13, previousPrime(13.9), "13 is the prime preceding 13.9" );
+      assert.equal( 2, previousPrime(0), "Should return the minimum prime (2)" );
+    });
+    QUnit.test( "Test Determining Primeness", function( assert ) {
+      assert.equal( true, isPrime(13), "13 is prime" );
+      assert.equal( false, isPrime(130), "130 is not prime" );
+    });
+
+
+
+    function nextPrime(val){
+      if (isNaN(val)){ val = 0; }
+      val -= val % 1;
+      if (val < 2){
+        val = 2;
+      } else if (val == 2) {
+        val = 3;
+      } else {
+        val++;
+        while(!isPrime(val)){
+            val++;
+        }
+      }
+      return val;
+    }
+    function previousPrime(val){
+      if (isNaN(val)){ val = 0; }
+      if (val % 1 != 0){
+        val = val - (val % 1) + 1
+      }
+      if (val <= 2){
+        val = 2;
+      } else if (val == 3) {
+        val = 2;
+      } else {
+        val--;
+        while(!isPrime(val)){
+            val--;
+        }
+      }
+      return val;
+    }
+    function isPrime(num){
+      if (num % 2 == 0){ return false; }
+      for (factor = 3; factor <= num / 2; factor += 2){
+        if (num % factor == 0){ return false; }
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

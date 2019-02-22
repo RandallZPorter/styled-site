@@ -39,7 +39,7 @@
                      <input type="button" id="previousButton" value="Previous Prime" onclick="testScriptPrevious()">
                      <input type="button" id="nextButton" value="Next Prime" onclick="testScriptNext()">
                      <p id="resultBox"></p>
-                     
+
                      <script>
                         function loadCookies(){
                            let savedNum = getCookie("savedPrimeNumber");
@@ -57,6 +57,11 @@
                         }
                         function testScriptNext(){
                            var val = document.getElementById("num").value; 
+                           val = nextPrime(val);
+                           document.getElementById("num").value = val;
+                           saveCookies();
+                        }
+                        function nextPrime(val){
                            if (isNaN(val)){ val = 0; }
                            val -= val % 1;
                            if (val < 2){
@@ -69,14 +74,16 @@
                                  val++;
                               }
                            }
-                           document.getElementById("num").value = val;
-                           saveCookies();
+                           return val;
                         }
                         function testScriptPrevious(){
                            var val = document.getElementById("num").value; 
+                           val = previousPrime(val);
+                           document.getElementById("num").value = val;
+                           saveCookies();
+                        }
+                        function previousPrime(val){
                            if (isNaN(val)){ val = 0; }
-                           //val = Math.round(val - (val % 1) + 0);
-                           //val = Math.round(val);
                            if (val % 1 != 0){
                               val = val - (val % 1) + 1
                            }
@@ -90,8 +97,7 @@
                                  val--;
                               }
                            }
-                           document.getElementById("num").value = val;
-                           saveCookies();
+                           return val;
                         }
                         function isPrime(num){
                            if (num % 2 == 0){ return false; }
