@@ -44,6 +44,7 @@
                         function loadCookies(){
                            let savedNum = getCookie("savedPrimeNumber");
                            document.getElementById("num").value = savedNum == null ? 2 : savedNum;
+                           getInfoBox();
                         }
                         function saveCookies(){
                            let savedNum = document.getElementById("num").value
