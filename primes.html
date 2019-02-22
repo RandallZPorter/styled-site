@@ -36,22 +36,9 @@
                   <form>	
                      <label for="num">Use this to find the next highest or lowest prime.</label>
                      <input type="text" id="num" name="num" placeholder="Enter an integer.">
-                     <input type="button" value="Previous Prime" onclick="testScriptPrevious()">
+                     <input type="button" id="previousButton" value="Previous Prime" onclick="testScriptPrevious()">
                      <input type="button" id="nextButton" value="Next Prime" onclick="testScriptNext()">
                      <p id="resultBox"></p>
-
-
-<!--
-                     <table class="infobox" style="width:22em;line-height: 1.5em"><tbody><tr><th colspan="2" style="text-align:center;font-size:125%;font-weight:bold;font-size: 150%"><table style="width:100%; margin:0"><tbody><tr>
-                           <td style="width:15%; text-align:left; white-space: nowrap; font-size:smaller"><a href="/wiki/199_(number)" title="199 (number)">&#8592; 199 </a></td>
-                           <td style="width:70%; padding-left:1em; padding-right:1em; text-align: center;">200</td>
-                           <td style="width:15%; text-align:right; white-space: nowrap; font-size:smaller"><a href="/wiki/201_(number)" title="201 (number)"> 201 &#8594;</a></td>
-                           </tr></tbody></table></th></tr><tr><td colspan="2" style="text-align:center;font-size:100%;"><div style="text-align:center;font-size:smaller;">  <a href="/wiki/199_(number)" title="199 (number)">←</a> <a class="mw-selflink selflink">200</a> <a href="/wiki/201_(number)" title="201 (number)">201</a> <a href="/wiki/202_(number)" title="202 (number)">202</a> <a href="/wiki/203_(number)" title="203 (number)">203</a> <a href="/wiki/204_(number)" title="204 (number)">204</a> <a href="/wiki/205_(number)" title="205 (number)">205</a> <a href="/wiki/206_(number)" title="206 (number)">206</a> <a href="/wiki/207_(number)" title="207 (number)">207</a> <a href="/wiki/208_(number)" title="208 (number)">208</a> <a href="/wiki/209_(number)" title="209 (number)">209</a> <a href="/wiki/210_(number)" title="210 (number)">→</a></div><div style="text-align:center;font-size:smaller;"> <a href="/wiki/List_of_numbers" title="List of numbers">List of numbers</a> — <a href="/wiki/Integer" title="Integer">Integers</a> </div><div style="text-align:center;font-size:smaller;"><a href="/wiki/Negative_number" title="Negative number">←</a> <a href="/wiki/0" title="0">0</a> <a href="/wiki/100_(number)" title="100 (number)">100</a> <a class="mw-selflink selflink">200</a> <a href="/wiki/300_(number)" title="300 (number)">300</a> <a href="/wiki/400_(number)" title="400 (number)">400</a> <a href="/wiki/500_(number)" title="500 (number)">500</a> <a href="/wiki/600_(number)" title="600 (number)">600</a> <a href="/wiki/700_(number)" title="700 (number)">700</a> <a href="/wiki/800_(number)" title="800 (number)">800</a> <a href="/wiki/900_(number)" title="900 (number)">900</a> <a href="/wiki/1000_(number)" title="1000 (number)">→</a></div></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Cardinal_number_(linguistics)" title="Cardinal number (linguistics)">Cardinal</a></th><td>two hundred</td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Ordinal_number_(linguistics)" title="Ordinal number (linguistics)">Ordinal</a></th><td>200th<br />(two hundredth)</td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Factorization" title="Factorization">Factorization</a></th><td>2<sup>3</sup>× 5<sup>2</sup></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Divisor" title="Divisor">Divisors</a></th><td>1, 2, 4, 5, 8, 10, 20, 25, 40, 50, 100, 200</td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Greek_numerals" title="Greek numerals">Greek numeral</a></th><td>Σ´</td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Roman_numerals" title="Roman numerals">Roman numeral</a></th><td>CC</td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Binary_number" title="Binary number">Binary</a></th><td>11001000<sub>2</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Ternary_numeral_system" title="Ternary numeral system">Ternary</a></th><td>21102<sub>3</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Quaternary_numeral_system" title="Quaternary numeral system">Quaternary</a></th><td>3020<sub>4</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Quinary" title="Quinary">Quinary</a></th><td>1300<sub>5</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Senary" title="Senary">Senary</a></th><td>532<sub>6</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Octal" title="Octal">Octal</a></th><td>310<sub>8</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Duodecimal" title="Duodecimal">Duodecimal</a></th><td>148<sub>12</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Hexadecimal" title="Hexadecimal">Hexadecimal</a></th><td>C8<sub>16</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Vigesimal" title="Vigesimal">Vigesimal</a></th><td>A0<sub>20</sub></td></tr><tr><th scope="row" style="font-weight:normal"><a href="/wiki/Base_36" class="mw-redirect" title="Base 36">Base 36</a></th><td>5K<sub>36</sub></td></tr></tbody></table>
-                        -->
-
-
-
-                     
                      
                      <script>
                         function loadCookies(){
@@ -119,21 +106,47 @@
             </article>
          </main>
 
-
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script>
                
-               document.getElementById('nextButton').addEventListener('mouseover', function() {
+               document.getElementById('nextButton').addEventListener('click', getInfoBox);
+               document.getElementById('previousButton').addEventListener('click', getInfoBox);
 
+               function getInfoBox(){
                   let val = document.getElementById("num").value; 
                   if (isNaN(val)){ val = 0; }
-                  const wikiURL = "https://en.wikipedia.org/wiki/" + val + "_(number)"
-                  $.get("https://randallzporter.github.io/styled-site/?url=" + wikiURL, function(response) { 
-                     alert(response) 
+                  //const wikiURL = "https://en.wikipedia.org/wiki/" + val + "_(number)"
+                  let pageName = "" + val + (val < 11 ? "" : "_(number)")
+                  
+                  $.ajax({
+                     type: "GET",
+                     //url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Jimi_Hendrix&callback=?",
+                     //url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + val + "_(number)&callback=?",
+                     url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + pageName + "&callback=?",
+                     contentType: "application/json; charset=utf-8",
+                     async: false,
+                     dataType: "json",
+                     success: function (data, textStatus, jqXHR) {
+
+                           var markup = data.parse.text["*"];
+                           var blurb = $('<div></div>').html(markup);
+                           //$('#resultBox').html($(blurb).find('p'));
+                           $('#resultBox').html($(blurb).find('table.infobox'));
+                           //document.getElementById("resultBox").innerHTML = blurb
+
+                     },
+                     error: function (errorMessage) {
+                     
+                     }
+
+                     
                   });
-                  document.getElementById("resultBox").innerHTML = val
+               }
+
+                  //document.getElementById("resultBox").innerHTML = val
                   
                   
-               })
+               
             </script>
 
          <br>

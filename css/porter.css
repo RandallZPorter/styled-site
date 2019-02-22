@@ -151,3 +151,12 @@ footer {
   color: white;
   margin-left: 1em;
 }
+
+.infobox {
+   pointer-events: none;
+   cursor: default;
+   border: 0.1em solid #ccc;
+   border-radius: 0.3em;
+   padding: 0.2em;
+   margin: 0.2em;
+}
